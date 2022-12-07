@@ -10,6 +10,7 @@ resource "random_integer" "boundary_password_length" {
 
 resource "random_string" "boundary_username" {
   length  = random_integer.boundary_username_length.result
+  upper   = false
   special = false
 }
 
