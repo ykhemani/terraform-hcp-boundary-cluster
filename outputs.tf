@@ -3,8 +3,7 @@ output "boundary_username" {
 }
 
 output "boundary_password" {
-  value     = random_password.boundary_password.result
-  sensitive = true
+  value = nonsensitive(random_password.boundary_password.result)
 }
 
 output "boundary_cluster_url" {
