@@ -15,8 +15,7 @@ resource "random_string" "boundary_username" {
 }
 
 resource "random_password" "boundary_password" {
-  length  = random_integer.boundary_password_length.result
-  special = false
+  length = random_integer.boundary_password_length.result
 }
 
 resource "hcp_boundary_cluster" "boundary_cluster" {
